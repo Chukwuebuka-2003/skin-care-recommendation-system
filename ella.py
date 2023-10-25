@@ -18,10 +18,10 @@ st.title("Product Recommendation App")
 st.sidebar.header("User Features")
 
 # Options for Skin_Tone, Skin_Type, Eye_Color, and Hair_Color
-skin_tone_options = ["No data", "Light", "Fair", "Medium", "Olive", "Tan", "Porcelain", "Deep", "Dark", "Ebony"]
-skin_type_options = ["Combination", "No data", "Dry", "Oily", "Normal"]
-eye_color_options = ["Brown", "No data", "Blue", "Hazel", "Green", "Gray"]
-hair_color_options = ["Brunette", "No data", "Blonde", "Black", "Auburn", "Red", "Gray"]
+skin_tone_options = ["Light", "Fair", "Medium", "Olive", "Tan", "Porcelain", "Deep", "Dark", "Ebony"]
+skin_type_options = ["Combination", "Dry", "Oily", "Normal"]
+eye_color_options = ["Brown", "Blue", "Hazel", "Green", "Gray"]
+hair_color_options = ["Brunette", "Blonde", "Black", "Auburn", "Red", "Gray"]
 
 skintone = st.sidebar.selectbox("Skin Tone:", skin_tone_options)
 skintype = st.sidebar.selectbox("Skin Type:", skin_type_options)
