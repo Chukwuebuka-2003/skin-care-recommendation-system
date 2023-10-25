@@ -5,13 +5,7 @@ from sklearn.metrics.pairwise import linear_kernel
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 # Load and preprocess your data
-df_cont = pd.read_csv('skindataall (1).csv')# Replace 'your_data.csv' with your actual data file
-
-# Load the saved SVD model
-with open('svd_model.pkl', 'rb') as model_file:
-    svd = pickle.load(model_file)
-
-
+df_cont = pd.read_csv('skindataall (1).csv')  # Replace 'your_data.csv' with your actual data file
 df_cont = df_cont[['Product', 'Product_id', 'Ingredients', 'Product_Url', 'Ing_Tfidf', 'Rating']]
 df_cont.drop_duplicates(inplace=True)
 
