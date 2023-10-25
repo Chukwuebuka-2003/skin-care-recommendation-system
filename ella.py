@@ -16,10 +16,17 @@ st.title("Product Recommendation App")
 
 # Input Fields
 st.sidebar.header("User Features")
-skintone = st.sidebar.text_input("Skin Tone:")
-skintype = st.sidebar.text_input("Skin Type:")
-eyecolor = st.sidebar.text_input("Eye Color:")
-haircolor = st.sidebar.text_input("Hair Color")
+
+# Options for Skin_Tone, Skin_Type, Eye_Color, and Hair_Color
+skin_tone_options = ["No data", "Light", "Fair", "Medium", "Olive", "Tan", "Porcelain", "Deep", "Dark", "Ebony"]
+skin_type_options = ["Combination", "No data", "Dry", "Oily", "Normal"]
+eye_color_options = ["Brown", "No data", "Blue", "Hazel", "Green", "Gray"]
+hair_color_options = ["Brunette", "No data", "Blonde", "Black", "Auburn", "Red", "Gray"]
+
+skintone = st.sidebar.selectbox("Skin Tone:", skin_tone_options)
+skintype = st.sidebar.selectbox("Skin Type:", skin_type_options)
+eyecolor = st.sidebar.selectbox("Eye Color:", eye_color_options)
+haircolor = st.sidebar.selectbox("Hair Color:", hair_color_options)
 
 if st.sidebar.button("Get Recommendations"):
     # Function to make predictions
