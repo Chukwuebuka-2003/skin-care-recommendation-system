@@ -1,5 +1,4 @@
 Python 3.10
 Pandas
 scikit-learn == 0.23.2
-from sklearn.metrics.pairwise import linear_kernel
-from sklearn.feature_extraction.text import TfidfVectorizer
+
