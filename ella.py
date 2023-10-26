@@ -37,11 +37,11 @@ if st.sidebar.button("Get Recommendations"):
         recommendations = []
 
         for _, row in ddf.iterrows():
+            # Replace 'Rating_Stars' with the actual column name representing product ratings
             prediction = svd.predict(row['User_id'], row['Product_id'])
-            recommendations.append({'Rating_Stars': prediction.est, 'Product_Url': row['Product_Url'], 'Product': row['Product']})
+            recommendations.append({'Product_Url': row['Product_Url'], 'Product': row['Product']})
 
         recommendations_df = pd.DataFrame(recommendations)
-        recommendations_df = recommendations_df.sort_values('Rating_Stars', ascending=False).head(10)
 
         st.subheader('Based on your features, these are the top products for you:')
         st.table(recommendations_df)
